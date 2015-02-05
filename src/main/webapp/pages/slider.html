@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<div id="apartments-recommend" class="camera_wrap camera_magenta_skin" 
+		style="margin-top: 80px;width: 80%;padding-left: 10%" >
+	<div data-src="images/apartments/s_5.jpg">
+    	<div class="camera_caption fadeFromBottom">
+        	<h2>name</h2>
+        	<p>
+        		describe......
+	         	<a href="#" onclick="loadMainPage('pages/apartments/apartment_item.html');">
+	         		<span>立即预订</span>
+	         	</a>
+         	</p>
+      	</div>
+ 	</div>
+	<div data-src="images/apartments/s_1.jpg">
+    	<div class="camera_caption fadeFromBottom">
+        	<h2>name</h2>
+        	<p>describe......</p>
+      	</div>
+	</div>
+	<div data-src="images/apartments/s_2.jpg">
+		<div class="camera_caption fadeFromBottom">
+        	<h2>name</h2>
+        	<p>describe......</p>
+		</div>
+ 	</div>
+	<div data-src="images/apartments/s_3.jpg">
+   		<div class="camera_caption fadeFromBottom">
+        	<h2>name</h2>
+         	<p>describe......</p>
+      	</div>
+	</div>
+	<div data-src="images/apartments/s_4.jpg">
+    	<div class="camera_caption fadeFromBottom">
+		 	<h2>name</h2>
+           	<p>describe......</p>
+      	</div>
+ 	</div>
+ 	<div data-src="images/apartments/s_6.jpg">
+      	<div class="camera_caption fadeFromBottom">
+		  	<h2>name</h2>
+         	<p>describe......</p>
+      	</div>
+  	</div>
+</div>
+    			
+<script>
+	$(function(){
+		$('#apartments-recommend').camera({
+			loader: 'bar',
+			pagination: false,
+			thumbnails: false
+		});
+	});
+</script>

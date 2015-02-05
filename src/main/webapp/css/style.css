@@ -1,0 +1,1135 @@
+@charset "utf-8";
+/* ===================================================================
+fonts
+ 10px = 77%     11px = 85%     12px = 93%     13px = 100%
+ 14px = 108%    15px = 116%    16px = 123.1%  17px = 131%
+ 18px = 138.5%  19px = 146.5%  20px = 153.9%  21px = 161.6%
+ 22px = 167%    23px = 174%    24px = 182%    25px = 189%
+ 26px = 197%    27px = 207.7%  28px = 215.4%
+=================================================================== */
+
+body { background: url("../images/share/bg_body.gif") repeat; 
+		  word-wrap: break-word;
+}
+body.popup { background: url("../images/share/bg_body_p.gif") repeat; 
+		  word-wrap: break-word;
+}
+
+::selection {
+	background: #a8dac4;
+	color: #fff;
+}
+::-moz-selection {	
+	background: #a8dac4;
+	color: #fff;
+}
+
+
+/* Font
+----------------------------------------------------*/
+
+@font-face {
+     font-family: Mincho;
+     src: url("font/h-min.eot");
+}
+
+@font-face {
+     font-family: Mincho;
+     src: url("font/h-min.otf") format("opentype");
+}
+
+@font-face {
+     font-family: AUR;
+     src: url("font/au-r.eot");
+}
+
+@font-face {
+     font-family: AUR;
+     src: url("font/au-r.otf") format("opentype");
+}
+
+@font-face {
+     font-family: AUB;
+     src: url("font/au-b.eot");
+}
+
+@font-face {
+     font-family: AUB;
+     src: url("font/au-b.otf") format("opentype");
+}
+
+
+/* Link
+----------------------------------------------------*/
+a { color: #f48b97; }
+a:link { color: #f48b97; }
+a:visited { color: #; }
+a:hover { color: #f9a1ab; }
+a:active { color: #f48b97; }
+
+
+/* Common
+----------------------------------------------------*/
+/* clerfix */
+.cf:after {
+	content: "."; display: block; visibility: hidden; height: 0.1px; font-size: 0.1em; line-height: 0; clear: both;
+}
+
+.imgR {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+.imgL {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.tC {
+	text-align: center;
+}
+
+.tR {
+	text-align: right;
+}
+
+.tL {
+	text-align: left;
+}
+
+small {
+	font-size: 93%;
+}
+
+/* subPage */
+.subPage h2 {
+	color: #555;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 300%;
+	letter-spacing: 3px;
+	height: 100px;
+	padding-top: 30px;
+	padding-left: 40px;
+	background: url("../images/bg_subPage_h2.gif") left center no-repeat;
+	
+}
+
+.subPage h2 span {
+	float: left;
+	display: block;
+}
+
+.subPage h2 strong {
+	display: block;
+	float: left;
+	color: #75c5a5;
+	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 23px;
+}
+
+.subPage .body {
+	clear: both;
+}
+
+.subPage h2 {
+	border-top: solid 10px #e1eee5;
+	
+}
+
+/* popup */
+.popup {
+}
+
+.popup #rule {
+	width: 600px;
+	padding: 20px;
+}
+
+.popup #rule h1, .popup #rule h2  {
+	padding: 20px 0px;
+	font-size: 123.1%;
+}
+
+.popup #rule p  {
+	padding-bottom: 1em;
+}
+
+.popup #rule ul li {
+	padding-bottom: 1em;
+}
+
+
+/*----------------------------------------------------
+	#page
+----------------------------------------------------*/
+
+#wrapper {
+	width: 100%;
+}
+
+#page {
+	/*width: 1060px;*/
+	/*background: #fff;*/
+	width:100%;
+	margin: 0 auto;
+	font-size: 100%;
+}
+
+
+/*----------------------------------------------------
+	#contents
+----------------------------------------------------*/
+#contents {
+	/zoom: 1;
+	clear: both;
+}
+
+
+/* catchArea */
+
+.catchArea {
+}
+
+.catch_l {
+	width: 760px; height: 420px;
+	float: left;
+	position: relative;
+	margin: 0; padding: 0;
+}
+
+.catch_s {
+	width: 300px; height: 420px;
+	float: left;
+	position: relative;
+	margin: 0; padding: 0;
+}
+
+.catch_sl {
+	width: 460px; height: 212px;
+	float: left;
+	position: relative;
+	margin: 0; padding: 0;
+}
+
+.catch_ss {
+	width: 300px; height: 212px;
+	float: left;
+	position: relative;
+	margin: 0; padding: 0;
+}
+
+.catch_l h2 {
+	position: absolute;
+	left: 20px; bottom: 20px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #aa9f8f;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 116%;
+	text-decoration: underline;
+}
+
+.catch_l h2 span {
+	font-size: 123.1%;
+}
+
+.catch_l h2 a { color: #fff; }
+.catch_l h2 a:link { color: #fff; }
+.catch_l h2 a:visited { color: #fff; }
+.catch_l h2 a:hover { color: #fff; text-decoration: none; }
+.catch_l h2 a:active { color: #fff; }
+
+
+.s_official {
+	background: url("../images/i_catch_s_official.gif") no-repeat;
+	color: #fff;
+	width: 300px; height: 420px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* sub catch */
+
+.subPage .catch_l .oneLine {
+	text-align: right;
+	position: absolute;
+	right: 40px; top: 170px;
+	color: #fff;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 60px;
+	letter-spacing: 2px;
+	line-height: 1.3;
+}
+
+.subPage .catch_l .twoLine {
+	text-align: right;
+	position: absolute;
+	right: 40px; top: 130px;
+	color: #fff;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 60px;
+	letter-spacing: 2px;
+	line-height: 1.3;
+}
+
+.subPage .catch_l .oneLineL {
+	text-align: right;
+	position: absolute;
+	left: 40px; top: 170px;
+	color: #fff;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 60px;
+	letter-spacing: 2px;
+	line-height: 1.3;
+}
+
+.subPage .catch_l .tG {
+	color: #7ac5a5;
+}
+
+.subPage .catch_l .tY {
+	color: #ffce79;
+}
+
+
+
+/* intro */
+
+#intro {
+	width: 1040px;
+	border-left: solid 10px #e1eee6;
+	border-right: solid 10px #e1eee6;
+	border-bottom: solid 10px #e1eee6;
+	clear: both;
+}
+
+#intro h3 {
+	margin-left: -10px;
+	position: relative;
+}
+
+#i_plan {
+	width: 940px; height: 410px;
+	margin: 50px auto; 
+	background: url("../images/bg_intro_plan.gif") no-repeat;
+	position: relative;
+}
+
+#i_plan #ip_1day   { position: absolute; left: 0; top: 74px; }
+#i_plan #ip_5day   { position: absolute; left: 0; top: 170px; }
+#i_plan #ip_pro    { position: absolute; left: 0; top: 266px; }
+/*#i_plan #ip_point  { position: absolute; right: 0; top: 74px; }*/
+#i_plan #ip_pair   { position: absolute; right: 0; top: 74px; }
+#i_plan #ip_makeup { position: absolute; right: 0; top: 266px; }
+
+
+#profile {
+	background: url("../images/bg_profile.gif") top center no-repeat;
+	margin-bottom: 40px;
+	border-top: solid 10px #e1eee6;
+	height: 1431px;
+}
+
+#profile h4 {
+	margin-bottom: 20px;
+}
+
+#p_profile {
+	margin-left: 50px;
+	padding-top: 90px;
+	position: relative;
+}
+
+#p_profile dl {
+	margin-bottom: 16px;
+}
+
+#p_profile dl dt {
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 138.5%;
+}
+
+#p_profile dl dd.name {
+	font-size: 197%;
+	letter-spacing: 5px;
+	margin-bottom: 10px;
+}
+
+#p_profile dl dd.name small {
+	font-size: 50%;
+	margin-right: 10px;
+}
+
+#p_profile .jhmaaSeal {
+	position: absolute;
+	left: 470px; top: 140px;
+}
+
+#p_profile .profilePhoto {
+	position: absolute;
+	left: 550px; top: 120px;
+	z-index: 5;
+}
+
+#p_profile .exLink {
+	position: absolute;
+	left: 780px; top: 342px;
+	z-index: 10;
+}
+
+#p_profile .exLink li {
+	margin-bottom: 2px;
+}
+
+#p_message {
+	text-align: right;
+	margin-right: 50px;
+	margin-top: 53px;
+}
+
+#p_message p {
+	margin-right: -7px;
+	line-height: 2;
+}
+
+#p_message p strong {
+	color: #f9a1ab;
+}
+
+#p_image {
+	position: relative;
+	z-index: 1;
+}
+
+#pi_01 { position: absolute; left: 50px; top: -472px; }
+#pi_02 { position: absolute; left: 40px; top: -133px; z-index: 2; }
+#pi_03 { position: absolute; left: 198px; top: 30px; z-index: 2; }
+#pi_04 { position: absolute; left: 38px; top: 220px; z-index: 1; }
+#pi_05 { position: absolute; right: 62px; top: 67px; }
+#pi_c_01 { position: absolute; left: 43px; top: -481px; }
+#pi_c_02-03 { position: absolute; left: 32px; top: -142px; z-index: 3; }
+#pi_c_04 { position: absolute; left: -12px; top: 212px; z-index: 3; }
+#pi_c_05 { position: absolute; right: 50px; top: 12px; }
+
+
+/*----------------------------------------------------
+	#lesson
+----------------------------------------------------*/
+
+#lesson {
+	position: relative;
+}
+
+#lesson .campaign {
+	position: absolute;
+	right: 60px; top: -240px;
+}
+
+#lesson #lessonimg_01 {
+	position: absolute;
+	right: 20px; top: -200px;
+}
+
+#lesson hr {
+	clear: both;	
+}
+
+
+/* l_course */
+
+#l_course {
+	width: 1060px; height: 293px;
+	margin-bottom: 40px;
+}
+
+#l_course a { color: #555; cursor: pointer; text-decoration: none;}
+#l_course a:link { color: #555; }
+#l_course a:visited { color: #555; }
+#l_course a:hover { color: #555; }
+#l_course a:active { color: #555; }
+
+#l_course a:hover dl {
+	opacity: .70;
+	filter: alpha(opacity=70);
+	-ms-filter: "alpha(opacity=70)";
+	-khtml-opacity: .70;
+	-moz-opacity: .70;
+}
+
+.l_courseSelect {
+	float: left;
+}
+
+.l_courseSelect dt {
+	font-size: 131%;
+	font-weight: bold;
+	margin-bottom: 5px;
+	border-bottom: solid 1px #dcd7d3;
+}
+
+.l_courseSelect span {
+	font-size: 138.5%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+}
+
+
+dl.l_courseSelect {
+	padding: 10px 10px 0 10px;
+}
+
+#lcs_1day {
+	width: 272px; height: 137px;
+	background: url("../images/bg_lesson_course_1day.gif") no-repeat;
+}
+#lcs_5day {
+	width: 272px; height: 137px; 
+	background: url("../images/bg_lesson_course_5day.gif") no-repeat;
+}
+/*#lcs_point {
+	width: 272px; height: 137px;
+	background: url(../images/bg_lesson_course_point.gif) no-repeat;
+}*/
+#lcs_pair {
+	width: 272px; height: 137px;
+	background: url("../images/bg_lesson_course_pair.gif") no-repeat;
+}
+#lcs_group {
+	width: 272px; height: 136px;
+	background: url("../images/bg_lesson_course_group.gif") no-repeat;
+}
+#lcs_reserve {
+	width: 272px; height: 136px;
+	background: url("../images/bg_lesson_course_reserve.gif") no-repeat;
+}
+#lcs_noimg {
+	width: 272px; height: 136px;
+	background: url("../images/bg_lesson_course_noimg.gif") no-repeat;
+}
+#lcs_blanc {
+	width: 272px; height: 136px;
+	background: url("../images/bg_lesson_course_blanc.gif") no-repeat;
+}
+#lcs_blanc  dt {
+	border: none;
+}
+
+/* lessonDetail */
+
+#lesson #lessonDetail_1day {
+	height: 860px;
+}
+
+#lesson #lessonDetail_5day {
+	height: 960px;
+}
+
+#lesson #lessonDetail_point {
+}
+
+#lesson #lessonDetail_pair {
+}
+
+#lesson #lessonDetail_group {
+}
+
+#lesson #lessonDetail_reserve {
+	height: 300px;
+}
+
+
+/* courseDetail */
+
+#lesson .courseDetail {
+	width: 700px;
+	float: left;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+#lesson .courseDetail .frame {
+	background: #fbf9f7;
+	margin: 20px 0 20px 40px;
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+#lesson h3 {
+	font-size: 167%;
+	letter-spacing: 2px;
+	background: url("../images/share/icon_heart_pink.gif") 40px 1px no-repeat;
+	padding-left: 80px;
+	margin-bottom: 1em;
+	border-bottom: dotted 1px #7ac5a5;
+	padding-bottom: 14px;
+}
+
+
+#lesson h3 small {
+	font-size: 50%;
+	margin-left: 4px;
+}
+
+#lesson #lessonDetail_1day h3 ,  #lesson #lessonDetail_5day h3 {
+	background: url("../images/share/icon_heart_pink.gif") 40px 10px no-repeat;
+}
+
+hr.main {
+	margin-bottom: 10px;
+}
+
+#lesson .l_price {
+	font-size: 138.5%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	letter-spacing: 3px;
+	color: #7ac5a5;
+	margin-left: 20px;
+}
+
+#lesson .l_price small {
+	letter-spacing: 1px;
+	color: #555;
+	font-size: 50%;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+#lesson .courseDetail p {
+	margin-left: 40px;
+	z-index: 10;
+	position: relative;
+}
+
+#lesson .courseDetail dl {
+	background: #fbf9f7;
+	margin: 20px 0 20px 40px;
+	padding: 20px;
+}
+
+#lesson .courseDetail dl dt {
+	font-size: 116%;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+#lesson .courseDetail dl dd {
+	background: url("../images/share/arrow_pink.gif") left 0.4em no-repeat;
+	padding-left: 24px;
+	margin-bottom: 0.5em;
+}
+
+#lesson dl.withPrice {
+	float: left;
+	width: 620px;
+	padding-bottom: 0;
+}
+
+#lesson dl.withPrice dt {
+	float: left;
+	clear: both;
+	margin-right: 20px;
+}
+
+#lesson dl.withPrice dd {
+	background: none;
+	padding-left: 0px;
+	margin: 0 0 20px 0;
+	float: left;
+}
+
+*:first-child+html #lesson dl.withPrice dd {
+	float: none;
+}
+
+
+#lesson dl.withPrice dd.l_price {
+	font-size: 182%;
+	margin-left: 0px;
+	margin: -10px 0 20px 20px;
+}
+
+
+#lesson dl.gl_type {
+	background: #f1faf6;
+}
+
+#lesson dl.gl_type span {
+	font-size: 138.5%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-style: italic;
+}
+
+/* courseImage */
+
+#lesson .courseImage {
+	width: 320px;
+	float: right;
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 1;
+}
+
+#lesson .courseImage img {
+	z-index: 1;
+}
+
+#lesson .courseImage #img01_2 {
+	position: absolute;
+	left: -640px; top: 250px;
+	z-index: 10;
+}
+
+#lesson .courseImage #img03 {
+	position: absolute;
+	left: -680px; top: 360px;
+}
+
+#lesson .courseImage #img06 {
+	position: absolute;
+	left: -180px; top: 30px;
+}
+
+#lesson .courseImage #img07 {
+	position: absolute;
+	left: -120px; top: 0px;
+}
+
+#lesson .courseImage #img07 {
+	color: #7ac5a5;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+#lesson .courseImage #img07 span {
+	font-size: 138.5%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	margin-left: 20px;
+}
+
+
+/*----------------------------------------------------
+	#makeup
+----------------------------------------------------*/
+
+.c_makeup {
+	background: url("../images/makeup_img_01.jpg") right top no-repeat;
+}
+
+#makeup {
+	position: relative;
+}
+
+#makeup #makeup_btn_cosme {
+	position: absolute;
+	right: 200px; top: -210px;
+}
+
+#makeup #makeup_btn_model {
+	position: absolute;
+	right: 20px; top: -210px;
+}
+
+#makeup .explain {
+	padding-left: 40px;
+	line-height: 2;
+	margin-right: 280px;
+}
+
+
+#makeupScene {
+	position: relative;
+	margin-top: -20px;
+	margin-bottom: 40px;
+	
+}
+
+#makeup h3 {
+	font-size: 167%;
+	letter-spacing: 2px;
+	background: url("../images/share/icon_heart_pink.gif") 40px 1px no-repeat;
+	padding-left: 80px;
+	margin-bottom: 1em;
+	border-bottom: dotted 1px #7ac5a5;
+	padding-bottom: 14px;
+	position: relative;
+	z-index: 5;
+}
+
+
+#makeupPrice {
+	margin: 0 0px 60px 40px;
+	padding-bottom: 40px;
+	position: relative;
+}
+
+#makeupPrice h4 {
+	font-size: 138.5%;
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 10;
+}
+
+#makeupPrice h4 small {
+	font-size: 77%;
+	margin-left: 20px;
+}
+
+#makeupPrice h4 span {
+	font-size: 138.5%;
+	color: #7ac5a5;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	margin-left: 20px;
+}
+
+
+#makeupPrice .sub {
+	background: url("../images/share/arrow_pink.gif") left 0.4em no-repeat;
+	padding-left: 24px;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 10;
+}
+
+#makeupPrice #mpimg {
+	position: absolute;
+	right: 0; top: 0px;
+	z-index: 1;
+}
+
+#makeupReserve {
+	margin: 0 40px;
+	position: relative;
+	height: 230px;
+}
+
+#makeupReserve_contact {
+	color: #7ac5a5;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+	position: absolute;
+	right: 0px; top: 0px;
+}
+
+#makeupReserve_contact span {
+	font-size: 138.5%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	margin-left: 20px;
+}
+
+#makeup .notice {
+	border: solid 1px #7ac5a5;
+	padding: 20px;
+	margin-right: 560px;
+	position: relative;
+	z-index: 10;
+}
+
+
+
+/*----------------------------------------------------
+	#procourse
+----------------------------------------------------*/
+
+#procourse {
+	position: relative;
+	overflow: visible;
+	margin-top: -40px;
+}
+
+
+#procourse p.explain {
+	margin-left: 40px;
+	position: relative;
+	z-index: 10;
+	margin-right: 280px;
+}
+
+#procourse h3 {
+	font-size: 167%;
+	letter-spacing: 2px;
+	background:url("../images/share/icon_heart_pink.gif") 40px 1px no-repeat;
+	padding-left: 80px;
+	margin-bottom: 1em;
+	clear: both;
+	border-bottom: dotted 1px #7ac5a5;
+	padding-bottom: 14px;
+	position: relative;
+	z-index: 5;
+}
+
+#procourse h3 small {
+	font-size: 50%;
+	margin-left: 4px;
+}
+
+#procourse h4 {
+	font-size: 182%;
+	color: #7ac5a5;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	margin: 20px 0 -20px 40px;
+	letter-spacing: 2px;
+}
+
+#procourse dl {
+	background: #fbf9f7;
+	margin: 20px 360px 20px 40px;
+	padding: 20px 10px 20px 20px;
+	clear: both;
+	overflow: auto;
+}
+
+#procourse dl.guideline dd {
+	letter-spacing: 2px;
+}
+
+#procourse dl dt {
+	font-size: 116%;
+	font-weight: bold;
+	float: left; clear: both;
+	width: 80px;
+	line-height: 182%;
+	margin-bottom: 10px;
+}
+
+#procourse dl dd {
+	padding-left: 24px;
+	margin-bottom: 10px;
+	float: left;
+	line-height: 182%;
+}
+
+*:first-child+html #procourse dl dd {
+	float: none;
+}
+
+#procourse .figure {
+	font-size: 182%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #7ac5a5;
+	margin-top: -10px;
+}
+
+#procourse dl hr {
+	clear: both;
+	border-top: 4px double #999;
+}
+
+#procourse hr {
+	margin-top: 40px;
+	z-index: 10;
+	position: relative;
+}
+
+#procourse .notice {
+	background: #fbf9f7;
+	margin: 20px 360px 20px 40px;
+	padding: 20px;
+}
+
+#procourse #procourse_img_01 {
+	position: absolute;
+	right: 40px; top: 120px;
+	z-index: 0;
+}
+
+#procourse #procourse_img_02 {
+	position: absolute;
+	right: 40px; bottom: 30px;
+	z-index: 1;
+}
+
+
+/*----------------------------------------------------
+	#cosmetics
+----------------------------------------------------*/
+
+#cosmetics {
+	height: 572px;
+	background: url("../images/bg_cosmetics.jpg") left top no-repeat;
+}
+
+#cosmetics p {
+	margin-bottom: 2em;
+	line-height: 2;
+	text-align: center;
+}
+
+
+/*----------------------------------------------------
+	#access
+----------------------------------------------------*/
+
+#access {
+	height: 720px;
+	padding-top: 40px;
+	background: url("../images/bg_access.jpg") left top no-repeat;
+}
+
+#access dl {
+	text-align: center;
+	margin: 0 200px;
+}
+
+#access dl dt {
+	font-size: 138.5%;
+	color: #ffce79;
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+
+#access dl dd {
+	font-size: 108%;
+}
+
+#access dl dd.address {
+	font-size: 138.5%;
+}
+
+
+/*----------------------------------------------------
+	#reserve
+----------------------------------------------------*/
+
+#reserve {
+}
+
+#reserveInner {
+	margin: 0 100px;
+	border: solid 8px #7ac5a5;
+	/*background: url(../images/bg_reserveInner.gif) left top no-repeat;*/
+	padding-bottom: 40px;
+}
+
+#reserve h3 {
+	font-size: 215.4%;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #7ac5a5;
+	text-align: center;
+	border-bottom: solid 4px #7ac5a5;
+}
+
+#reserve .figure {
+	font-size: 215.4%;
+	margin-bottom: 20px;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #7ac5a5;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 1;
+}
+
+#reserve address.figure {
+	font-size: 300%;
+	padding-top: 20px;
+}
+
+#reserve p.figure {
+	padding-bottom: 20px;
+}
+
+#reserve .figure small {
+	font-size: 60%;
+	margin-right: 20px;
+}
+
+#reserve h3#reserve_howto {
+	font-size: 138.5%;
+	line-height: 2;
+	padding-top: 4px;
+}
+#reserve h3#reserve_flow {
+	font-size: 138.5%;
+	line-height: 2;
+	padding-top: 4px;
+	border-top: solid 8px #7ac5a5;
+}
+#reserve h3#reserve_mail {
+	border-top: solid 8px #7ac5a5;
+}
+
+#reserve .explain {
+	background: #fbf9f7;
+	padding: 20px 40px;
+	margin-top: -20px;
+	position: relative;
+}
+
+#reserve .mailform {
+	padding-top: 20px;
+}
+
+#complete h3 {
+	border-bottom: none;
+}
+
+#complete {
+	text-align: center;
+}
+
+#complete p {
+	margin-bottom: 2em;
+	
+}
+
+#complete dl {
+	border: solid 1px #7ac5a5;
+	padding: 20px;
+	margin: 0 340px;
+}
+
+
+
+
+
+/*----------------------------------------------------
+	#model
+----------------------------------------------------*/
+
+#model {
+	height: 700px;
+	background: url("../images/bg_model.jpg") left top no-repeat;
+}
+
+#model p {
+	margin-bottom: 3em;
+	line-height: 2;
+	text-align: center;
+}
+
+#model .contact {
+	font-size: 116%;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #7ac5a5;
+	padding: 10px 20px;
+	border: solid 1px #7ac5a5;
+	margin: 0 300px;
+}
+
+#model .contact b {
+	font-size: 138.5%;
+}
+
+/*----------------------------------------------------
+	#blog
+----------------------------------------------------*/
+
+#blog {
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+#blog h3 {
+	font-size: 215.4%;
+	margin-bottom: 20px;
+	font-family: AUR, "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #7ac5a5;
+	letter-spacing: 2px;
+}

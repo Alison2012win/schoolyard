@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<title>购物车</title>
+
+<div style="padding-top: 100px;margin-left: 10%;">
+	<table>
+		<thead>
+			<tr style="text-align: center;height:25px;background-color: #ED8063;font-weight: bold">
+				<td style="width: 250px;border: solid 1px #000;vertical-align: middle;color: #fff; border-right-color: #fff">商品图片</td>
+				<td style="width: 240px;border: solid 1px #000;vertical-align: middle;color: #fff; border-right-color: #fff">商品名称</td>
+				<td style="width: 150px;border: solid 1px #000;vertical-align: middle;color: #fff; border-right-color: #fff">商品单价</td>
+				<td style="width: 150px;border: solid 1px #000;vertical-align: middle;color: #fff; border-right-color: #fff">商品数量</td>
+				<td style="width: 150px;border: solid 1px #000;vertical-align: middle;color: #fff;">操作</td>
+			</tr>
+		</thead>
+		<tbody style="background-color: #fff;">
+			<tr style="text-align: center;height:150px;">
+				<td style="width: 240px;border: solid 1px;vertical-align: middle;">
+					<img src="images/public/no-pic.jpg" style="padding:5px;width: 90%;height:78%"/>
+				</td>
+				<td style="width: 240px;border: solid 1px;vertical-align: middle;">
+					<span>xxxx.xxxx</span>
+				</td>
+				<td style="width: 240px;border: solid 1px;vertical-align: middle;">
+					￥<span style="font-size: 18px;font-weight: 900;">88</span><br>
+					<a href="#" style="font-size: 13px;">立即登陆，尊享会员价￥<span>68</span>元</a>
+				</td>
+				<td style="width: 240px;border: solid 1px;vertical-align: middle;">
+					<button type="button">-</button>
+					<input value="1" style="width: 30px;" readonly>
+					<button type="button">+</button>
+				</td>
+				<td style="width: 150px;border: solid 1px;vertical-align: middle;">
+					<button type="button">删除</button>
+					<button type="button">立即预定</button>
+				</td>
+			</tr>
+			<tr style="text-align:right; height:25px;border: solid 1px;">
+				<td colspan="5" style="vertical-align: middle;padding-right: 10px;">
+					<span>价格总计：￥</span>
+					<span style="font-size: 18px;font-weight: 900;color: #B91D1E">88</span>
+					<span>元</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="#" class="btn" style="float: right;margin-top: 10px;margin-right: 7.3%;color: #fff" 
+		onclick="loadMainPage('pages/apartments/book_all.html');">全部预定</a>
+</div>

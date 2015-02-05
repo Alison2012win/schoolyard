@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+        http://www.springframework.org/schema/security  
+        http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http auto-config="false" use-expressions="true">
+		<!-- 设置登录过滤器 -->
+		<custom-filter before="FORM_LOGIN_FILTER" ref="validateCodeAuthenticationFilter" />
+		<custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
+
+		<intercept-url pattern="/api/**" access="hasAnyRole('USER')" />
+		<intercept-url pattern="/index*" access="hasAnyRole('USER')" />
+		<form-login login-page="/login.jsp" default-target-url="/"
+			authentication-failure-url="/login.jsp?error=true"/>
+		<logout logout-success-url="/login.jsp" />
+		<session-management
+			session-authentication-strategy-ref="sas" />
+	</http>
+
+
+	<!-- <authentication-manager> <authentication-provider> <user-service> <user -->
+	<!-- name="admin" password="secret" authorities="ROLE_ADMIN,ROLE_USER" /> 
+		<user -->
+	<!-- name="user1" password="1111" authorities="ROLE_USER" /> </user-service> 
+		</authentication-provider> -->
+	<!-- </authentication-manager> -->
+
+	<!-- 验证码过滤器 -->
+	<beans:bean id="validateCodeAuthenticationFilter"
+		class="com.schoolyard.common.web.filter.ValidateCodeUsernamePasswordAuthenticationFilter">
+		<beans:property name="authenticationSuccessHandler"
+			ref="authenticationSuccessHandler"></beans:property>
+		<beans:property name="authenticationFailureHandler"
+			ref="simpleUrlAuthenticationFailureHandler"></beans:property>
+		<beans:property name="authenticationManager" ref="authenticationManager"></beans:property>
+		<beans:property name="sessionAuthenticationStrategy" ref="sas" />
+	</beans:bean>
+
+	<!-- 登录成功 -->
+	<!-- <beans:bean id="loginLogAuthenticationSuccessHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler"> 
+		<beans:property name="defaultTargetUrl" value="/"></beans:property> </beans:bean> -->
+	<beans:bean id="authenticationSuccessHandler"
+		class="com.schoolyard.school.console.service.impl.LoginSuccessHandler">
+		<beans:property name="defaultTargetUrl" value="/"></beans:property>
+		<beans:property name="alwaysUseDefaultTargetUrl" value="true"></beans:property>
+	</beans:bean>
+
+	<!-- 登录失败 -->
+	<beans:bean id="simpleUrlAuthenticationFailureHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<beans:property name="defaultFailureUrl" value="/login.jsp?error=true"></beans:property>
+	</beans:bean>
+
+	<beans:bean id="sas"
+		class="org.springframework.security.web.authentication.session.ConcurrentSessionControlStrategy">
+		<beans:constructor-arg name="sessionRegistry"
+			ref="sessionRegistry" />
+		<beans:property name="maximumSessions" value="1" />
+	</beans:bean>
+
+	<beans:bean id="concurrencyFilter"
+		class="com.schoolyard.common.web.session.ConcurrentSessionFilter">
+		<beans:property name="sessionRegistry" ref="sessionRegistry" />
+		<beans:property name="expiredUrl" value="/session-expired.htm" />
+	</beans:bean>
+
+	<beans:bean id="sessionRegistry"
+		class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsServiceImpl">
+			<password-encoder hash="md5">
+				<!-- <salt-source user-property="username"/> -->
+			</password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>

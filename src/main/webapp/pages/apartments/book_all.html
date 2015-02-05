@@ -1,0 +1,107 @@
+<meta charset="UTF-8">
+<title>订单填写页</title>
+
+<div style="padding-top: 10px;">
+	<div class="footer">
+		<div class="footer-main wrap">
+			<div class="footer-grids">
+				<div class="fgrid" style="width: 90px;">
+					<h3 style="font-size: 1em;padding-top:10px;font-weight: bold;">填写订单</h3>
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+	</div>
+	<div style="width: 80%;margin-left: 11%;margin-top: 20px;">
+		<div style="width: 30%;height:30%;float: left;">
+			<img src="images/public/no-pic.jpg" style="width: 405px;height:290px;"/>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordiondemo" href="#accordion1">
+							<span>￥536元</span>
+							<span style="float: right;">↓房源信息</span>
+						</a>
+					</h4>
+				</div>
+				<div id="accordion1" class="panel-collapse collapse">
+					<div class="panel-body">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="float: left;margin-left: 20px;height: 40%;width: 34%;">
+			<div style="margin-top: 20px;">
+				<span>房型信息：</span>
+				<span style="font-weight: bold;">G50豪华双床房-不含早（预付）</span>
+			</div>
+			<div style="margin-top: 20px;">
+				<span>入住时间：</span>
+				<div>
+					<input id="begin_time" type="text" class="form-control datepicker-input" placeholder="入住" style="width: 40%;float: left;">
+					<input id="end_time" type="text" class="form-control datepicker-input" placeholder="离店" style="width: 40%;">
+				</div>
+			</div>
+			<div style="margin-top: 20px;">
+				<span>房间数量：</span>
+				<div style="width: 80%;">
+					<select class="form-control selectpicker">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+				</div>
+			</div>
+			<div style="margin-top: 20px;">
+				<label class="check icheck">
+					<input type="checkbox">&nbsp;需要发票
+				</label>
+			</div>
+		</div>
+		<div style="float: left;margin-left: 20px;">
+			<div style="margin-top: 20px;">
+				<span>入住人：（每间房只需填写1人姓名）</span>
+				<input class="form-control" placeholder="房间1">
+			</div>
+			<div style="margin-top: 20px;">
+				<span>联系电话：</span>
+				<input class="form-control">
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<a href="#" class="btn" style="float: right;margin-top: 10px;margin-right: 7.3%;color: #fff" 
+		onclick="loadMainPage('pages/order_info.html');">提交订单</a>
+</div>
+
+<script>
+	$(function(){
+		$(".selectpicker").selectpicker();
+		
+		$("#begin_time").datepicker({  
+			format: 'yyyy.mm.dd',        
+			weekStart: 1,        
+			autoclose: true,        
+			todayBtn: 'linked',       
+			language: 'zh-CN' });
+			 
+		$("#end_time").datepicker({  
+			format: 'yyyy.mm.dd',        
+			weekStart: 1,        
+			autoclose: true,        
+			todayBtn: 'linked',       
+			language: 'zh-CN' });
+			 
+		$('input:not(.ios-switch)').iCheck({
+		  	checkboxClass: 'icheckbox_square-aero',
+		  	radioClass: 'iradio_square-aero',
+		  	increaseArea: '20%' // optional
+		});
+	});
+</script>
